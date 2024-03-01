@@ -84,8 +84,8 @@ export function generate(
         server: [
           {
             id: id,
-            username: process.env['username'],
-            password: process.env['password']
+            username: process.env[username],
+            password: process.env[password]
           }
         ]
       }
@@ -95,7 +95,7 @@ export function generate(
   if (gpgPassphrase) {
     const gpgServer = {
       id: 'gpg.passphrase',
-      passphrase: process.env['gpgPassphrase']
+      passphrase: process.env[gpgPassphrase]
     };
     xmlObj.settings.servers.server.push(gpgServer);
   }

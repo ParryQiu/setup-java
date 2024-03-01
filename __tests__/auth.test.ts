@@ -180,7 +180,7 @@ describe('auth tests', () => {
   </servers>
 </settings>`;
 
-    expect(auth.generate(id, username, password)).toEqual(expectedSettings);
+    expect(auth.generate(id, 'username', 'password')).toEqual(expectedSettings);
   });
 
   it('generates valid settings.xml with additional configuration', () => {
@@ -209,7 +209,7 @@ describe('auth tests', () => {
   </servers>
 </settings>`;
 
-    expect(auth.generate(id, username, password, gpgPassphrase)).toEqual(
+    expect(auth.generate(id, 'username', 'password', 'gpgPassphrase')).toEqual(
       expectedSettings
     );
   });
